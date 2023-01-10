@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import PageLayout from 'src/common/components/PageLayout';
 
-const Profile = () => {
-    return (
-        <>
-            <PageLayout>
-                <>
-                    <h1>프로필 페이지</h1>
-                    <h2>프로필 정보</h2>
-                </>
-            </PageLayout>
-        </>
-    );
+import PageLayout from 'src/common/components/PageLayout';
+import Profile from 'src/profile/components/templates';
+
+const Index = () => {
+  return (
+    <>
+      <PageLayout headerTitle={'프로필'}>
+        <Profile />
+      </PageLayout>
+    </>
+  );
 };
 
-export default Profile;
+export default Index;
