@@ -1,0 +1,85 @@
+.setting-all {
+    padding: 6px 0 5px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.setting-list {
+    padding: 10px 0 10px 20px;
+}
+
+.setting-switch {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 6px 20px 7px;
+}
+
+.setting-switch .title {
+    display: inline-block;
+    font-size: 14px;
+    color: #333;
+    line-height: 2;
+}
+
+.checkbox-switch {
+    position: absolute;
+    opacity: 0;
+}
+
+input:checked+.label-switch {
+    background: #3b416c;
+}
+
+input:checked+.label-switch:before {
+    left: -webkit-calc(100% - 30px);
+    left: -moz-calc(100% - 30px);
+    left: calc(100% - 30px);
+}
+
+.label-switch {
+    display: inline-block;
+    position: relative;
+    width: 51px;
+    height: 31px;
+    -webkit-border-radius: 36px;
+    -moz-border-radius: 36px;
+    border-radius: 36px;
+    font-size: 0;
+    text-indent: -9999px;
+    vertical-align: top;
+    background: #f0f0f0;
+}
+
+.label-switch:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    width: 29px;
+    height: 29px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background: #fff;
+    -webkit-box-shadow: 0 3px 3px 0 rgb(0 0 0 / 5%);
+    -moz-box-shadow: 0 3px 3px 0 rgba(0,0,0,.05);
+    box-shadow: 0 3px 3px 0 rgb(0 0 0 / 5%);
+    border: 1px solid rgba(0,0,0,.01);
+    -webkit-transition: left .3s ease;
+    -o-transition: left .3s ease;
+    -moz-transition: left .3s ease;
+    transition: left .3s ease;
+}
