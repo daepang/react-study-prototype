@@ -55,6 +55,12 @@
 }
 
 .module-header-title {
+    width: -webkit-calc(100% - 200px);
+    width: -moz-calc(100% - 200px);
+    width: calc(100% - 200px);
+}
+
+.module-header-title {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -74,6 +80,41 @@
     width: -moz-calc(100% - 100px);
     width: calc(100% - 100px);
     text-align: center;
+}
+
+.module-header-layer .module-header-left, .module-header-layer .module-header-right, .module-header-layer .module-header-util {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -moz-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    align-items: center;
+    margin-left: auto;
+}
+
+.module-header-layer .module-header-left .module-header-btn, .module-header-layer .module-header-right .module-header-btn, .module-header-layer .module-header-util .module-header-btn {
+    display: inline-block;
+}
+
+.module-header-btn:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    -webkit-background-size: 50% 50%;
+    -moz-background-size: 50% 50%;
+    -o-background-size: 50% 50%;
+    background-size: 50% 50%;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
 }
 
 /* Contents */
