@@ -1,6 +1,7 @@
 import React from 'react';
 
 import ProfileInfo from 'src/profile/components/organisms/ProfileInfo';
+import Router, { useRouter } from 'next/router';
 
 const Profile = () => {
   return (
