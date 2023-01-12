@@ -23,7 +23,7 @@ const ProfileInfo = ({ imageUrl }: Props) => {
 
         <div className='profileInfo-btnBox'>
           <LinkButton url={'/'} buttonClass={'profileInfo-btn'} buttonText={'프로필 편집'} />
-          <LinkButton url={'/'} buttonClass={'profileInfo-btn'} buttonText={'친구 목록'} />
+          <LinkButton url={'/profile/friend'} buttonClass={'profileInfo-btn'} buttonText={'친구 목록'} />
         </div>
       </section>
     </>
