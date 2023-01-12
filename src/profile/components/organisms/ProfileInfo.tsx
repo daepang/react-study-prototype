@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
+import LinkButton from 'src/profile/components/atoms/button/LinkButton';
 import ProfileImage from 'src/profile/components/molecules/ProfileImage';
 import ProfileScore from 'src/profile/components/molecules/ProfileScore';
 
@@ -18,6 +19,11 @@ const ProfileInfo = ({ imageUrl }: Props) => {
 
           {/* 프로필 정보 영역 */}
           <ProfileScore />
+        </div>
+
+        <div className='profileInfo-btnBox'>
+          <LinkButton url={'/'} buttonClass={'profileInfo-btn'} buttonText={'프로필 편집'} />
+          <LinkButton url={'/'} buttonClass={'profileInfo-btn'} buttonText={'친구 목록'} />
         </div>
       </section>
     </>
