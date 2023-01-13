@@ -30,7 +30,7 @@ const Modal = ({ isOpen, setIsOpen, title, children, onlyConfirmBtn, clickConfir
   };
 
   // 확인 버튼
-  const ConfirmButtonComps = () => <TextButton title={'확인'} onClick={clickConfirm} />;
+  const ConfirmButtonComps = () => <TextButton btnClasses={'btnContained'} title={'확인'} onClick={clickConfirm} />;
 
   // 취소 버튼
   const CancelButtonComps = () => <TextButton btnClasses={'btnCloseLayer'} title={'취소'} onClick={clickCancel} />;
@@ -66,3 +66,5 @@ const Modal = ({ isOpen, setIsOpen, title, children, onlyConfirmBtn, clickConfir
     </>
   );
 };
+
+export default Modal;
