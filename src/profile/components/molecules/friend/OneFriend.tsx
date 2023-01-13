@@ -7,9 +7,10 @@ import ProfileImage from 'src/profile/components/molecules/ProfileImage';
 interface Props {
   imageUrl: string;
   friendName: string;
+  sendMessage: Function;
 }
 
-const OneFriend = ({ imageUrl, friendName }: Props) => {
+const OneFriend = ({ imageUrl, friendName, sendMessage }: Props) => {
   return (
     <>
       <div className={classNames('friendCard friendCard-list')}>
@@ -19,6 +20,13 @@ const OneFriend = ({ imageUrl, friendName }: Props) => {
         {/* 친구 이름 영역 */}
         <span className={classNames('friendCard-info')}>
           <span className={classNames('friendCard-friendName')}>{friendName}</span>
+        </span>
+
+        {/* 메세지 */}
+        <span className={'friendCard-side'}>
+          <button className={'friendCard-btn friendCard-btn-message'} onClick={() => sendMessage()}>
+            메세지
+          </button>
         </span>
       </div>
     </>
