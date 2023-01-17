@@ -107,7 +107,7 @@ const FullLayer = ({
         >
           <div className={'popupcontainerBox'} ref={popupContainerRef}>
             <div className={'popupInner'}>
-              <button>{'레이어 끌기 버튼'}</button>
+              <button className={'btnIr btnLayerHandler'}>{'레이어 끌기 버튼'}</button>
 
               {(title || titleNode) && (
                 <div className={'popupHead'}>
@@ -119,7 +119,11 @@ const FullLayer = ({
 
               <div className={'popupContents'}>{children}</div>
               {bottomComps}
-              {isShowCloseLayerBtn && <button onClick={() => setIsOpen(false)}>{'레이어 닫기'}</button>}
+              {isShowCloseLayerBtn && (
+                <button className={'btnIr popupClose btnCloseLayer'} onClick={() => setIsOpen(false)}>
+                  {'레이어 닫기'}
+                </button>
+              )}
             </div>
           </div>
         </Draggable>
