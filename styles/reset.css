@@ -53,3 +53,10 @@ hr, legend, caption{clear:both; display:none; list-style:none; position:absolute
 .flex {
     display: flex;
 }
+
+*, button, input, option, select, textarea {
+    outline: none!important;
+    outline-color: initial;
+    outline-style: none;
+    outline-width: initial;
+}
