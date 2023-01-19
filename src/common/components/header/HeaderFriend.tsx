@@ -2,6 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 
 interface Props {
+  // 친구 추가 이벤트
   addFriend?: Function;
 }
 
