@@ -2,4 +2,5 @@
 export enum HEADER_TYPE {
   DEFAULT = 'DEFAULT',
   PROFILE = 'PROFILE',
+  FRIEND = 'FRIEND',
 }

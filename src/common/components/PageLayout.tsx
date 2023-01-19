@@ -14,14 +14,16 @@ interface Props {
   showHeader?: boolean;
   // 헤더 제목
   headerTitle?: string;
+  // 헤더 우측 Function
+  headerUtilFunc?: Function;
 }
 
 const PageLayout = forwardRef(
-  ({ children, headerType = HEADER_TYPE.DEFAULT, showHeader = true, headerTitle }: Props) => {
+  ({ children, headerType = HEADER_TYPE.DEFAULT, showHeader = true, headerTitle, headerUtilFunc }: Props) => {
     return (
       <>
         <section className={classNames('wrap')}>
-          {showHeader && <Header headerType={headerType} headerTitle={headerTitle} />}
+          {showHeader && <Header headerType={headerType} headerTitle={headerTitle} headerUtilFunc={headerUtilFunc} />}
           <section>{children}</section>
         </section>
       </>
