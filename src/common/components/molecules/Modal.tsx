@@ -3,14 +3,20 @@ import classNames from 'classnames';
 
 import TextButton from 'src/common/components/atoms/button/TextButton';
 
-// Props
 interface Props {
+  // 열림,닫힘 상태
   isOpen: boolean;
+  // 열림,닫힘 상태 변경
   setIsOpen: Dispatch<SetStateAction<boolean>>;
+  // 상단 타이틀
   title?: string;
+  // 내용
   children: string | ReactNode;
+  // 확인 버튼만 상태
   onlyConfirmBtn?: boolean;
+  // 확인 버튼 클릭 시 호출 이벤트
   clickConfirmProp?: Function;
+  // 취소 버튼 클릭 시 호출 이벤트
   clickCancelProp?: Function;
 }
 
