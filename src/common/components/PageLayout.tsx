@@ -1,4 +1,4 @@
-import React, { forwardRef, ReactNode, useEffect, useState } from 'react';
+import React, { forwardRef, ReactNode } from 'react';
 import classNames from 'classnames';
 
 import Header from 'src/common/components/header/Header';
@@ -14,7 +14,7 @@ interface Props {
   showHeader?: boolean;
   // 헤더 제목
   headerTitle?: string;
-  // 헤더 우측 Function
+  // 헤더 우측 호출 이벤트
   headerUtilFunc?: Function;
 }
 
