@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import PageLayout from 'src/common/components/PageLayout';
 import Profile from 'src/profile/components/templates';

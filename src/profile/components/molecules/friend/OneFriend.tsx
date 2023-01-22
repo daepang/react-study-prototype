@@ -3,7 +3,6 @@ import classNames from 'classnames';
 
 import ProfileImage from 'src/profile/components/molecules/ProfileImage';
 
-// Props
 interface Props {
   imageUrl: string;
   friendName: string;
