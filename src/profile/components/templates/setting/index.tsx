@@ -5,8 +5,11 @@ import OneSetting from 'src/profile/components/molecules/setting/OneSetting';
 
 // 설정 타입
 interface settingType {
+  // 설정 구분 id
   id: number;
+  // 설정 이름
   name: string;
+  // 설정 체크 여부
   checked: boolean;
 }
 

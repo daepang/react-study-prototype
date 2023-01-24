@@ -1,6 +1,7 @@
 import React from 'react';
 
 interface Props {
+  // 프로필 이미지 URL
   imageUrl: string;
 }
 

@@ -6,6 +6,7 @@ import ProfileImage from 'src/profile/components/molecules/ProfileImage';
 import ProfileScore from 'src/profile/components/molecules/ProfileScore';
 
 interface Props {
+  // 프로필 이미지 URL
   imageUrl: string;
 }
 

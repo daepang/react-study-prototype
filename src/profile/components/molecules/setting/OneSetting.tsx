@@ -2,9 +2,13 @@ import React from 'react';
 import classNames from 'classnames';
 
 interface Props {
+  // 설정 구분 id
   id: number;
+  // 설정 이름
   name: string;
+  // 설정 체크 여부
   isChecked: boolean;
+  // 설정 체크 이벤트
   handleChange: Function;
 }
 
