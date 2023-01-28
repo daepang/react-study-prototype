@@ -280,9 +280,9 @@
     -moz-box-pack:center;
     -ms-flex-pack:center;
     justify-content:center;
-    width:-webkit-calc(100%+8px);
-    width:-moz-calc(100%+8px);
-    width:calc(100%+8px);
+    width:-webkit-calc(100% + 8px);
+    width:-moz-calc(100% + 8px);
+    width:calc(100% + 8px);
     margin:0 -4px;
 }
 .popupBtnWrap .btnContained {
@@ -450,7 +450,7 @@
     overflow:hidden;
 }
 .anchorBottom .popupContents:last-of-type {
-    padding-bottom:calc(20px+env(safe-area-inset-bottom));
+    padding-bottom:calc(20px + env(safe-area-inset-bottom));
 }
 .btnIr {
     outline:none;
