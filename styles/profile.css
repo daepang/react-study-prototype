@@ -215,6 +215,22 @@ input:checked+.label-switch:before {
     -moz-transition: left .3s ease;
     transition: left .3s ease;
 }
+/* 편집 */
+.profileEdit {
+    padding: 20px 20px 30px;
+    text-align: center;
+}
+.profileEdit .profileCard-img{
+    margin: 0 auto 20px;
+    width: 100px;
+    height: 100px;
+    min-width: 100px;
+    min-height: 100px;
+    -webkit-background-size: 100px 100px;
+    -moz-background-size: 100px 100px;
+    -o-background-size: 100px 100px;
+    background-size: 100px 100px;
+}
 /* 친구 */
 .friendCard {
     display: -webkit-box;
