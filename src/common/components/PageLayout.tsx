@@ -1,4 +1,4 @@
-import React, { forwardRef, ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import classNames from 'classnames';
 
 import Header from 'src/common/components/header/Header';
@@ -18,17 +18,20 @@ interface Props {
   headerUtilFunc?: Function;
 }
 
-const PageLayout = forwardRef(
-  ({ children, headerType = HEADER_TYPE.DEFAULT, showHeader = true, headerTitle, headerUtilFunc }: Props) => {
-    return (
-      <>
-        <section className={classNames('wrap')}>
-          {showHeader && <Header headerType={headerType} headerTitle={headerTitle} headerUtilFunc={headerUtilFunc} />}
-          <section>{children}</section>
-        </section>
-      </>
-    );
-  },
-);
-
+const PageLayout = ({
+  children,
+  headerType = HEADER_TYPE.DEFAULT,
+  showHeader = true,
+  headerTitle,
+  headerUtilFunc,
+}: Props) => {
+  return (
+    <>
+      <section className={classNames('wrap')}>
+        {showHeader && <Header headerType={headerType} headerTitle={headerTitle} headerUtilFunc={headerUtilFunc} />}
+        <section>{children}</section>
+      </section>
+    </>
+  );
+};
 export default PageLayout;
