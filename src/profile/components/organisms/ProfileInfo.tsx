@@ -1,5 +1,8 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import classNames from 'classnames';
+
+import { RootState } from 'src/store';
 
 import LinkButton from 'src/profile/components/atoms/button/LinkButton';
 import ProfileImage from 'src/profile/components/molecules/ProfileImage';
@@ -11,6 +14,9 @@ interface Props {
 }
 
 const ProfileInfo = ({ imageUrl }: Props) => {
+  // 프로필 닉네임 상태
+  const profileName = useSelector((state: RootState) => state.profile.profileName);
+
   return (
     <>
       <section className={classNames('profileInfo')}>
@@ -21,6 +27,9 @@ const ProfileInfo = ({ imageUrl }: Props) => {
           {/* 프로필 정보 영역 */}
           <ProfileScore />
         </div>
+
+        {/* 프로필 닉네임 영역 */}
+        <div className={'profileInfo-nickName'}>{profileName}</div>
 
         <div className='profileInfo-btnBox'>
           <LinkButton url={'/profile/edit'} buttonClass={'profileInfo-btn'} buttonText={'프로필 편집'} />

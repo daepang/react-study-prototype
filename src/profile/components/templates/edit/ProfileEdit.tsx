@@ -31,6 +31,7 @@ const ProfileEdit = () => {
     setNickName(inputNickName);
   };
 
+  // 닉네임 변경 Event
   const changeNickName = () => {
     dispatch(setProfileName(nickName));
     window.alert('닉네임이 변경되었습니다.');
@@ -49,22 +50,22 @@ const ProfileEdit = () => {
           <div className={'profileEdit-titleBox'}>
             <h2 className={'profileEdit-title'}>프로필 닉네임 변경</h2>
           </div>
-          <div className='formGrid'>
-            <div className='formControl'>
-              <div className='inputBase'>
+          <div className={'formGrid'}>
+            <div className={'formControl'}>
+              <div className={'inputBase'}>
                 <input
-                  type='text'
-                  className='inp '
-                  placeholder='닉네임을 입력해주세요.'
-                  title='닉네임을 입력해주세요.'
+                  type={'text'}
+                  className={'inp'}
+                  placeholder={'닉네임을 입력해주세요.'}
+                  title={'닉네임을 입력해주세요.'}
                   value={nickName}
                   onChange={e => handleChangeNickName(e.target.value)}
                 />
-                <div className='inpFrame' aria-hidden='true'></div>
+                <div className={'inpFrame'}></div>
               </div>
             </div>
-            <div className='formControl formButton'>
-              <button className='btnContained colorSecondary' onClick={changeNickName}>
+            <div className={'formControl formButton'}>
+              <button className={'btnContained colorSecondary'} onClick={changeNickName}>
                 닉네임 변경
               </button>
             </div>
