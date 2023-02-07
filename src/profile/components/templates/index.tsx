@@ -6,7 +6,7 @@ const Profile = () => {
   return (
     <>
       {/* 프로필 정보 영역 */}
-      <ProfileInfo imageUrl={'https://placeimg.com/200/100/animals/sepia'} />
+      <ProfileInfo imageUrl={'https://picsum.photos/100/100'} />
     </>
   );
 };

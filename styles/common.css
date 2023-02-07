@@ -296,7 +296,7 @@
     margin:0 4px;
 }
 .btnContained {
-    background-color:#3a6f39;
+    background-color:#7bbf79;
     color:#fff;
 }
 .btnContained {
@@ -326,6 +326,10 @@
     color:#000;
     vertical-align:middle;
     text-shadow:none;
+}
+.btnContained.colorSecondary {
+    background-color: #e6e9f5;
+    color: #000;
 }
 [class*=anchor] {
     -webkit-transition:-webkit-transform 225ms cubic-bezier(0,0,.2,1) 0ms;
@@ -624,4 +628,37 @@ textarea {
     font-size:14px;
     font-weight:400;
     color: #191919;
+}
+
+/* form */
+.formGrid {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: -webkit-calc(100% + 10px);
+    width: -moz-calc(100% + 10px);
+    width: calc(100% + 10px);
+    margin: 0 -5px 10px;
+}
+.formGrid .formControl {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 100%;
+    -moz-box-flex: 1;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+    padding: 0 5px;
+}
+.formGrid .formControl.formButton {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -moz-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+}
+.formGrid .formControl.formButton .btnContained, .formGrid .formControl.formButton .btnOutlined {
+    height: 45px;
+    min-width: 75px;
+    padding: 0 5px;
 }

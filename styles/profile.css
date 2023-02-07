@@ -231,6 +231,33 @@ input:checked+.label-switch:before {
     -o-background-size: 100px 100px;
     background-size: 100px 100px;
 }
+.profileEdit-field {
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+.profileEdit-titleBox {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.profileEdit-title {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+}
+.profileEdit-field .btnContained {
+    font-size: 14px;
+    font-weight: 400;
+}
 /* 친구 */
 .friendCard {
     display: -webkit-box;
