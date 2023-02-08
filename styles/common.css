@@ -662,3 +662,28 @@ textarea {
     min-width: 75px;
     padding: 0 5px;
 }
+/* bottomBar */
+.bottomBar {
+    max-width: 640px;
+}
+.bottomBar .btnContained {
+    height: 70px;
+    height: -webkit-calc(70px + env(safe-area-inset-bottom));
+    height: -moz-calc(70px + env(safe-area-inset-bottom));
+    height: calc(70px + env(safe-area-inset-bottom));
+    padding-bottom: env(safe-area-inset-bottom);
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    font-weight: 700;
+    font-size: 16px;
+}
+.bottomBar>.btnContained {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+    -moz-box-flex: 0;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    position: relative;
+    width: 100%;
+}
