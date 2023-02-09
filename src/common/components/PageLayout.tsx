@@ -16,6 +16,8 @@ interface Props {
   headerTitle?: string;
   // 헤더 우측 호출 이벤트
   headerUtilFunc?: Function;
+  // 하단 버튼
+  bottomButton?: ReactNode;
 }
 
 const PageLayout = ({
@@ -24,12 +26,14 @@ const PageLayout = ({
   showHeader = true,
   headerTitle,
   headerUtilFunc,
+  bottomButton,
 }: Props) => {
   return (
     <>
       <section className={classNames('wrap')}>
         {showHeader && <Header headerType={headerType} headerTitle={headerTitle} headerUtilFunc={headerUtilFunc} />}
         <section>{children}</section>
+        {bottomButton}
       </section>
     </>
   );
