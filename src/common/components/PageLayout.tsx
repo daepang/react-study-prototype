@@ -32,8 +32,10 @@ const PageLayout = ({
     <>
       <section className={classNames('wrap')}>
         {showHeader && <Header headerType={headerType} headerTitle={headerTitle} headerUtilFunc={headerUtilFunc} />}
-        <section>{children}</section>
-        {bottomButton}
+        <section className={classNames('container', { hasFixedBtn: !!bottomButton })}>
+          <section className={classNames('contents')}>{children}</section>
+          {bottomButton}
+        </section>
       </section>
     </>
   );
