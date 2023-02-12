@@ -686,8 +686,26 @@ textarea {
     padding: 0 5px;
 }
 /* bottomBar */
-.bottomBar {}
-
+.bottomBar {
+    position: fixed;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    max-width: 1024px;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    z-index: 100;
+}
 .bottomBar .btnContained {
     height: 70px;
     height: -webkit-calc(70px + env(safe-area-inset-bottom));
