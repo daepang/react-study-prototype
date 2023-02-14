@@ -5,12 +5,14 @@ import classNames from 'classnames';
 import type { RootState } from 'src/store';
 
 import ProfileImage from 'src/profile/components/molecules/ProfileImage';
-import { setProfile, setProfileName, setImageUrl } from 'src/profile/features/slice';
+import { setProfile, setProfileName, setImageUrl, setIsProfileSave } from 'src/profile/features/slice';
 
 const ProfileEdit = () => {
   const dispatch = useDispatch();
   // 프로필 닉네임 상태
-  const profileName = useSelector((state: RootState) => state.profile.profileName);
+  const profileName: string = useSelector((state: RootState) => state.profile.profileName);
+  // 프로필 저장 상태
+  const isProfileSave: boolean = useSelector((state: RootState) => state.profile.isProfileSave);
 
   // 닉네임 상태
   const [nickName, setNickName] = useState<string>(profileName);
@@ -36,6 +38,14 @@ const ProfileEdit = () => {
     dispatch(setProfileName(nickName));
     window.alert('닉네임이 변경되었습니다.');
   };
+
+  useEffect(() => {
+    if (isProfileSave) {
+      dispatch(setProfileName(nickName));
+      window.alert('프로필이 저장되었습니다.');
+      dispatch(setIsProfileSave(false));
+    }
+  }, [isProfileSave]);
 
   return (
     <>

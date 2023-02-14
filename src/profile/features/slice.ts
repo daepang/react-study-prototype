@@ -3,14 +3,19 @@ import type { PayloadAction } from '@reduxjs/toolkit';
 
 // 프로필 상태
 export interface ProfileState {
+  // 프로필 닉네임
   profileName: string;
+  // 프로필 이미지 URL
   imageUrl: string;
+  // 프로필 저장 상태
+  isProfileSave: boolean;
 }
 
 // 프로필 상태 초기화
 const initialState: ProfileState = {
   profileName: '',
   imageUrl: '',
+  isProfileSave: false,
 };
 
 export const profileSlice = createSlice({
@@ -30,9 +35,13 @@ export const profileSlice = createSlice({
       state.imageUrl = action.payload.imageUrl;
       state.profileName = action.payload.profileName;
     },
+    // 프로필 저장 상태 변경
+    setIsProfileSave: (state, action: PayloadAction<boolean>) => {
+      state.isProfileSave = action.payload;
+    },
   },
 });
 
-export const { setProfileName, setImageUrl, setProfile } = profileSlice.actions;
+export const { setProfileName, setImageUrl, setProfile, setIsProfileSave } = profileSlice.actions;
 
 export default profileSlice.reducer;

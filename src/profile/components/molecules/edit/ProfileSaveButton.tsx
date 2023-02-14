@@ -1,11 +1,15 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 
+import { setIsProfileSave } from 'src/profile/features/slice';
+
 export const ProfileSaveButton = () => {
   const dispatch = useDispatch();
 
   // 프로필 저장
-  const saveProfile = () => {};
+  const saveProfile = () => {
+    dispatch(setIsProfileSave(true));
+  };
   return (
     <>
       <div className={'bottomBar'}>
