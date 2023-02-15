@@ -9,6 +9,8 @@ import { setProfile, setProfileName, setImageUrl, setIsProfileSave } from 'src/p
 
 const ProfileEdit = () => {
   const dispatch = useDispatch();
+  // 이미지 편집 레이어 오픈 상태
+  const [isOpenImageEdit, setIsOpenImageEdit] = useState(false);
   // 프로필 닉네임 상태
   const profileName: string = useSelector((state: RootState) => state.profile.profileName);
   // 프로필 저장 상태
@@ -52,7 +54,11 @@ const ProfileEdit = () => {
       <section>
         {/* 프로필 이미지 영역 */}
         <section className={classNames('profileEdit')}>
-          <ProfileImage imageUrl={'https://picsum.photos/100/100'} />
+          <ProfileImage
+            imageUrl={'https://picsum.photos/100/100'}
+            isChangeBtn={true}
+            setIsOpenImageEdit={setIsOpenImageEdit}
+          />
         </section>
 
         {/* 프로필 닉네임 영역 */}
