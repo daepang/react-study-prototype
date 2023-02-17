@@ -354,6 +354,17 @@
     background-color: #e6e9f5;
     color: #000;
 }
+.selectOptions li:not(:first-child) {
+    margin-top: 7px;
+}
+.selectOptions li>.btnContained, .selectOptions li>.btnOutlined {
+    display: block;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 16px;
+}
 [class*=anchor] {
     -webkit-transition:-webkit-transform 225ms cubic-bezier(0,0,.2,1) 0ms;
     transition:-webkit-transform 225ms cubic-bezier(0,0,.2,1) 0ms;
@@ -445,6 +456,12 @@
     display:inline-block;
     width:16px;
     height:16px;
+}
+[class*=anchor] .btnContained, [class*=anchor] .btnLink, [class*=anchor] .btnOutlined {
+    height: 52px;
+}
+:not([class*=anchor]) label.btnContained {
+    line-height: 49px;
 }
 .modalPopupWrap.open .anchorBottom .popupInner,.modalPopupWrap.open .fullLayer .popupInner {
     -webkit-transform:translateY(0);

@@ -22,22 +22,22 @@ const ImageEditLayer = ({ setIsOpenImageEdit, setIsOpenCropPage, setIsOpenBasicP
 
   return (
     <>
-      <ul className='selectOptions feed-more__buttons'>
+      <ul className={'selectOptions'}>
         {/* 앨범에서 선택 버튼 */}
         <li>
-          <label>촬영/앨범에서 선택</label>
-          <input type='file' style={{ display: 'none' }} ref={inputFileRef} />
+          <label className={'btnContained'}>촬영/앨범에서 선택</label>
+          <input type='file' className={'blind'} style={{ display: 'none' }} ref={inputFileRef} />
         </li>
 
         {/* 기본 이미지에서 선택 버튼 */}
         <li>
-          <button>기본 이미지에서 선택</button>
+          <button className={'btnOutlined'}>기본 이미지에서 선택</button>
         </li>
 
         {/* 이미지 제거 버튼 */}
         {isRemoveImage && (
           <li>
-            <button>이미지 제거</button>
+            <button className={'btnOutlined'}>이미지 제거</button>
           </li>
         )}
       </ul>
