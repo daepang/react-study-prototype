@@ -3,8 +3,10 @@ import { useSelector, useDispatch } from 'react-redux';
 import classNames from 'classnames';
 
 import type { RootState } from 'src/store';
+import FullLayer from 'src/common/components/molecules/FullLayer';
 
 import ProfileImage from 'src/profile/components/molecules/ProfileImage';
+import ImageEditLayer from 'src/profile/components/organisms/edit/ImageEditLayer';
 import { setProfile, setProfileName, setImageUrl, setIsProfileSave } from 'src/profile/features/slice';
 
 const ProfileEdit = () => {
@@ -87,6 +89,13 @@ const ProfileEdit = () => {
             </div>
           </div>
         </div>
+
+        {/* 프로필 이미지 편집 레이어 */}
+        <FullLayer isOpen={isOpenImageEdit} setIsOpen={setIsOpenImageEdit} isShowCloseLayerBtn={false}>
+          {/*<ImageEditLayer
+            setIsOpenImageEdit={setIsOpenImageEdit}
+          />*/}
+        </FullLayer>
       </section>
     </>
   );
