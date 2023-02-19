@@ -13,6 +13,12 @@ const ProfileEdit = () => {
   const dispatch = useDispatch();
   // 이미지 편집 레이어 오픈 상태
   const [isOpenImageEdit, setIsOpenImageEdit] = useState(false);
+  // 이미지 크롭 페이지 오픈 상태
+  const [isOpenCropPage, setIsOpenCropPage] = useState(false);
+  // 기본 이미지 선택 페이지 오픈 상태
+  const [isOpenBasicPage, setIsOpenBasicPage] = useState(false);
+  // 이미지 제거 버튼 노출 여부
+  const [isRemoveImage, setIsRemoveImage] = useState(false);
   // 프로필 닉네임 상태
   const profileName: string = useSelector((state: RootState) => state.profile.profileName);
   // 프로필 저장 상태
@@ -92,9 +98,12 @@ const ProfileEdit = () => {
 
         {/* 프로필 이미지 편집 레이어 */}
         <FullLayer isOpen={isOpenImageEdit} setIsOpen={setIsOpenImageEdit} isShowCloseLayerBtn={false}>
-          {/*<ImageEditLayer
+          <ImageEditLayer
             setIsOpenImageEdit={setIsOpenImageEdit}
-          />*/}
+            setIsOpenCropPage={setIsOpenCropPage}
+            setIsOpenBasicPage={setIsOpenBasicPage}
+            isRemoveImage={isRemoveImage}
+          />
         </FullLayer>
       </section>
     </>
