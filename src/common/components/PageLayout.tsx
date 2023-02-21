@@ -4,7 +4,6 @@ import classNames from 'classnames';
 import Header from 'src/common/components/header/Header';
 import { HEADER_TYPE } from 'src/common/const/header';
 
-// Props
 interface Props {
   // 자식 컴포넌트
   children: ReactNode;
