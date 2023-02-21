@@ -8,9 +8,13 @@ export interface fileType {
 }
 
 interface Props {
+  // 이미지 편집 레이어 열림,닫힘 상태 변경
   setIsOpenImageEdit: Function;
+  // 이미지 크롭 페이지 열림,닫힘 상태 변경
   setIsOpenCropPage: Function;
+  // 기본 이미지 페이지 열림,닫힘 상태 변경
   setIsOpenBasicPage: Function;
+  // 이미지 제거 여부 상태
   isRemoveImage: boolean;
 }
 
@@ -19,6 +23,12 @@ const ImageEditLayer = ({ setIsOpenImageEdit, setIsOpenCropPage, setIsOpenBasicP
 
   // 첨부 파일 ref
   const inputFileRef = useRef<HTMLInputElement>(null);
+
+  // 기본 이미지 선택
+  const basicImage = () => {
+    setIsOpenImageEdit(false);
+    setIsOpenBasicPage(true);
+  };
 
   return (
     <>
@@ -31,7 +41,9 @@ const ImageEditLayer = ({ setIsOpenImageEdit, setIsOpenCropPage, setIsOpenBasicP
 
         {/* 기본 이미지에서 선택 버튼 */}
         <li>
-          <button className={'btnOutlined'}>기본 이미지에서 선택</button>
+          <button className={'btnOutlined'} onClick={basicImage}>
+            기본 이미지에서 선택
+          </button>
         </li>
 
         {/* 이미지 제거 버튼 */}
