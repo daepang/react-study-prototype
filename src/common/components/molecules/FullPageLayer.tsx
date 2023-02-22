@@ -7,10 +7,12 @@ interface Props {
   isOpen: boolean;
   // 열림/닫힘 상태 변경
   setIsOpen: Dispatch<SetStateAction<boolean>>;
+  // 상단 좌측 뒤로가기 버튼 여부
+  showBeforeBtn?: boolean;
+  // 상단 좌측 뒤로가기 호출 함수
+  beforeLayer?: () => void;
   // 상단 타이틀
   title?: string;
-  // 상단 우측 닫기 버튼
-  closeBtn?: boolean;
   // 상단 우측 버튼 컴포넌트
   utilBtn?: ReactNode;
   // 내용
@@ -19,10 +21,6 @@ interface Props {
   openLayer?: () => void;
   // 닫힘 함수
   closeLayer?: () => void;
-  // 상단 좌측 뒤로가기 버튼 여부
-  showBeforeBtn?: boolean;
-  // 뒤로가기 함수
-  beforeLayer?: () => void;
   // 헤더 클래스
   headerClasses?: string;
 }
@@ -30,14 +28,13 @@ interface Props {
 const FullPageLayer = ({
   isOpen,
   setIsOpen,
+  showBeforeBtn,
+  beforeLayer,
   title,
-  closeBtn,
   utilBtn,
   children,
   openLayer: openLayerProp,
   closeLayer: closeLayerProp,
-  showBeforeBtn,
-  beforeLayer,
   headerClasses,
 }: Props) => {
   // 레이어 열리기 전 부모 창 scroll 저장
@@ -96,25 +93,20 @@ const FullPageLayer = ({
               })}
             >
               <div className={classNames('module-header-layer')}>
+                {/* 상단 좌측 영역 */}
                 {showBeforeBtn && beforeLayer && (
-                  <button className='btnIr back' onClick={beforeLayer}>
-                    뒤로
-                  </button>
-                )}
-                {!!title && <h1 className={'module-header__title'}>{title}</h1>}
-                <div className={'module-header--right'}>
-                  {closeBtn && (
-                    <button
-                      className='module-header__btn module-header__btn--close'
-                      onClick={() => {
-                        setIsOpen(false);
-                      }}
-                    >
-                      닫기
+                  <div className={'module-header-left'}>
+                    <button className='btnIr back' onClick={beforeLayer}>
+                      뒤로
                     </button>
-                  )}
-                  {utilBtn && utilBtn}
-                </div>
+                  </div>
+                )}
+
+                {/* 상단 타이틀 영역 */}
+                {!!title && <h1 className={'module-header-title'}>{title}</h1>}
+
+                {/* 상단 우측 영역 */}
+                <div className={'module-header-right'}>{utilBtn && utilBtn}</div>
               </div>
             </div>
 
