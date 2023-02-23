@@ -30,6 +30,11 @@ const ImageEditLayer = ({ setIsOpenImageEdit, setIsOpenCropPage, setIsOpenBasicP
     setIsOpenBasicPage(true);
   };
 
+  // 이미지 제거 후 레이어 닫기
+  const removeImage = () => {
+    setIsOpenImageEdit(false);
+  };
+
   return (
     <>
       <ul className={'selectOptions'}>
@@ -49,7 +54,9 @@ const ImageEditLayer = ({ setIsOpenImageEdit, setIsOpenCropPage, setIsOpenBasicP
         {/* 이미지 제거 버튼 */}
         {isRemoveImage && (
           <li>
-            <button className={'btnOutlined'}>이미지 제거</button>
+            <button className={'btnOutlined'} onClick={removeImage}>
+              이미지 제거
+            </button>
           </li>
         )}
       </ul>
