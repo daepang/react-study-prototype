@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 
 import { imageUrlToBase64 } from 'src/common/util/base64';
+
+import { setImageUrl } from 'src/profile/features/slice';
 
 interface Props {
   // 기본 이미지 페이지 열림,닫힘 상태 변경
@@ -10,11 +13,14 @@ interface Props {
 }
 
 const BasicProfileImage = ({ setIsOpenBasicPage, setIsOpenImageEdit }: Props) => {
+  const dispatch = useDispatch();
+
   // 이미지 선택 여부
   const [isSelect, setIsSelect] = useState<boolean>(false);
 
   // 이미지 클릭 호출
   const handleImageClick = () => {
+    dispatch(setImageUrl(''));
     setIsOpenImageEdit(false);
     setIsOpenBasicPage(false);
   };
