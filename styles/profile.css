@@ -50,6 +50,7 @@
     -webkit-background-size: 50px 50px;
     -moz-background-size: 50px 50px;
     -o-background-size: 50px 50px;
+    background-image: url(/resources/images/profile-default-img.svg);
     background-size: 50px 50px;
     background-position: 50% 50%;
     background-repeat: no-repeat;

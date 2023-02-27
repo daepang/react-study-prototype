@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
+import { setImageUrl } from 'src/profile/features/slice';
+
 // 파일 타입
 export interface fileType {
   fileName: string;
@@ -32,6 +34,7 @@ const ImageEditLayer = ({ setIsOpenImageEdit, setIsOpenCropPage, setIsOpenBasicP
 
   // 이미지 제거 후 레이어 닫기
   const removeImage = () => {
+    dispatch(setImageUrl(''));
     setIsOpenImageEdit(false);
   };
 

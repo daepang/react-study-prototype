@@ -61,6 +61,14 @@ const ProfileEdit = () => {
     }
   }, [isProfileSave]);
 
+  useEffect(() => {
+    if (imageUrl) {
+      setIsRemoveImage(true);
+    } else {
+      setIsRemoveImage(false);
+    }
+  }, [imageUrl]);
+
   return (
     <>
       <section>
