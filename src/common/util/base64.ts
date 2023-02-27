@@ -9,7 +9,7 @@ export const imageUrlToBase64 = (url: string, afterAction: Function) => {
         // Base64 데이터
         const base64 = reader.result;
         // Function으로 Base64 전달
-        afterAction(base64);
+        afterAction(base64 as string);
       };
       reader.readAsDataURL(xhr.response);
     };

@@ -91,6 +91,9 @@
 .module-header-layer .module-header-left .module-header-btn,.module-header-layer .module-header-right .module-header-btn,.module-header-layer .module-header-util .module-header-btn {
     display:inline-block;
 }
+.module-header-layer .module-header-left {
+    margin-left: 0
+}
 .module-header-btn:after {
     content:"";
     display:block;
@@ -508,6 +511,70 @@ label.btnContained {
     -o-transform:translateY(0);
     transform:translateY(0);
 }
+.fullLayer {
+    height: 100%;
+    max-width: 1024px;
+    width: 100%;
+}
+.fullLayer .popupcontainerBox {
+    max-width: none;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+.fullLayer .popupInner {
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transform: translateY(100%);
+    -webkit-transition: none;
+    -o-transition: none;
+    -moz-transition: none;
+    transition: none;
+}
+.fullLayer .popupHead {
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -moz-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    margin: 0;
+}
+.fullLayer .popupContents {
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    -webkit-box-align: inherit;
+    -webkit-align-items: inherit;
+    -moz-box-align: inherit;
+    -ms-flex-align: inherit;
+    align-items: inherit;
+    -webkit-box-pack: inherit;
+    -webkit-justify-content: inherit;
+    -moz-box-pack: inherit;
+    -ms-flex-pack: inherit;
+    justify-content: inherit;
+    text-align: inherit;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -moz-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    margin: 0;
+    padding: 0 0 30px;
+}
 .anchorBottom .popupcontainerBox {
     width:100%;
     max-width:640px;
@@ -604,7 +671,7 @@ label.btnContained {
     -moz-background-size:32px 32px;
     -o-background-size:32px 32px;
     background-size:32px 32px;
-    background-image:url(/resources/images/icon/ic_close.svg);
+    background-image:url(/resources/images/icon/ic-close.svg);
 }
 .btnIr:after {
     content:"";
@@ -614,6 +681,21 @@ label.btnContained {
     -moz-box-flex:0;
     -ms-flex:0 0 auto;
     flex: 0 0 auto;
+}
+.btnIr.back {
+    width: 32px;
+    height: 32px;
+}
+.btnIr.back.white:after, .btnIr.back:after {
+    width: 32px;
+    height: 32px;
+    -webkit-background-size: 32px 32px;
+    -moz-background-size: 32px 32px;
+    -o-background-size: 32px 32px;
+    background-size: 32px 32px;
+}
+.btnIr.back:after {
+    background-image: url(/resources/images/icon/ic-header-back.svg);
 }
 .blind {
     position: absolute;

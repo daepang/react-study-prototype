@@ -14,7 +14,7 @@ export interface ProfileState {
 // 프로필 상태 초기화
 const initialState: ProfileState = {
   profileName: '',
-  imageUrl: '',
+  imageUrl: 'https://picsum.photos/100/100',
   isProfileSave: false,
 };
 

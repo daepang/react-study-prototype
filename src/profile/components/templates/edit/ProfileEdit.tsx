@@ -4,9 +4,11 @@ import classNames from 'classnames';
 
 import type { RootState } from 'src/store';
 import FullLayer from 'src/common/components/molecules/FullLayer';
+import FullPageLayer from 'src/common/components/molecules/FullPageLayer';
 
 import ProfileImage from 'src/profile/components/molecules/ProfileImage';
 import ImageEditLayer from 'src/profile/components/organisms/edit/ImageEditLayer';
+import BasicProfileImage from 'src/profile/components/organisms/edit/BasicProfileImage';
 import { setProfile, setProfileName, setImageUrl, setIsProfileSave } from 'src/profile/features/slice';
 
 const ProfileEdit = () => {
@@ -19,6 +21,8 @@ const ProfileEdit = () => {
   const [isOpenBasicPage, setIsOpenBasicPage] = useState(false);
   // 이미지 제거 버튼 노출 여부
   const [isRemoveImage, setIsRemoveImage] = useState(false);
+  // 프로필 이미지 상태
+  const imageUrl = useSelector((state: RootState) => state.profile.imageUrl);
   // 프로필 닉네임 상태
   const profileName: string = useSelector((state: RootState) => state.profile.profileName);
   // 프로필 저장 상태
@@ -62,11 +66,7 @@ const ProfileEdit = () => {
       <section>
         {/* 프로필 이미지 영역 */}
         <section className={classNames('profileEdit')}>
-          <ProfileImage
-            imageUrl={'https://picsum.photos/100/100'}
-            isChangeBtn={true}
-            setIsOpenImageEdit={setIsOpenImageEdit}
-          />
+          <ProfileImage imageUrl={imageUrl} isChangeBtn={true} setIsOpenImageEdit={setIsOpenImageEdit} />
         </section>
 
         {/* 프로필 닉네임 영역 */}
@@ -95,8 +95,10 @@ const ProfileEdit = () => {
             </div>
           </div>
         </div>
+      </section>
 
-        {/* 프로필 이미지 편집 레이어 */}
+      {/* 프로필 이미지 편집 레이어 */}
+      {isOpenImageEdit && (
         <FullLayer isOpen={isOpenImageEdit} setIsOpen={setIsOpenImageEdit} isShowCloseLayerBtn={false}>
           <ImageEditLayer
             setIsOpenImageEdit={setIsOpenImageEdit}
@@ -105,7 +107,19 @@ const ProfileEdit = () => {
             isRemoveImage={isRemoveImage}
           />
         </FullLayer>
-      </section>
+      )}
+
+      {/* 기본 이미지 선택 페이지 영역 */}
+      {isOpenBasicPage && (
+        <FullPageLayer
+          isOpen={isOpenBasicPage}
+          setIsOpen={setIsOpenBasicPage}
+          showBeforeBtn={true}
+          beforeLayer={() => setIsOpenBasicPage(false)}
+        >
+          <BasicProfileImage setIsOpenBasicPage={setIsOpenBasicPage} setIsOpenImageEdit={setIsOpenImageEdit} />
+        </FullPageLayer>
+      )}
     </>
   );
 };

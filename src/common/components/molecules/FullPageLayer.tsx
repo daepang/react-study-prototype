@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { Dispatch, ReactNode, SetStateAction, useEffect, useState } from 'react';
+import React, { Dispatch, ReactNode, SetStateAction, useEffect, useState } from 'react';
 import classNames from 'classnames';
 
 interface Props {

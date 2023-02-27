@@ -293,6 +293,65 @@ input:checked+.label-switch:before {
     font-size: 14px;
     font-weight: 400;
 }
+/* 이미지 편집 */
+.profile-select {
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    grid-row-gap: 20px;
+    row-gap: 20px;
+    padding: 30px 20px;
+}
+.profile-selectItem.on {
+    position: relative;
+}
+.profile-selectItem.on:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 86px;
+    height: 86px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 4px solid #3a416f;
+    background: transparent;
+}
+.profile-selectItem, .profile-selectItem img {
+    display: block;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+.profile-selectItem {
+    position: relative;
+    overflow: visible;
+    width: 92px;
+    height: 92px;
+    -webkit-background-size: 92px 92px;
+    -moz-background-size: 92px 92px;
+    -o-background-size: 92px 92px;
+    background-size: 92px 92px;
+    background-image: url(/resources/images/profile-default-img.svg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.profile-selectItem img {
+    width: 100%;
+    height: 100%;
+    line-height: 1;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 /* 친구 */
 .friendCard {
     display: -webkit-box;
