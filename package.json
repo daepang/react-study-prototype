@@ -29,6 +29,7 @@
     "next": "^13.1.1",
     "prettier": "^2.2.1",
     "react": "18.2.0",
+    "react-cropper": "^2.1.8",
     "react-dom": "18.2.0",
     "react-draggable": "^4.4.3",
     "react-html-parser": "^2.0.2",
