@@ -295,6 +295,26 @@ input:checked+.label-switch:before {
     font-weight: 400;
 }
 /* 이미지 편집 */
+.profile-regist {
+    position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -moz-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+.profile-regist-center {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
 .profile-select {
     display: grid;
     grid-template-columns: repeat(4,auto);
