@@ -7,7 +7,9 @@ import FullLayer from 'src/common/components/molecules/FullLayer';
 import FullPageLayer from 'src/common/components/molecules/FullPageLayer';
 
 import ProfileImage from 'src/profile/components/molecules/ProfileImage';
+import ImageCropSaveButton from 'src/profile/components/molecules/edit/ImageCropSaveButton';
 import ImageEditLayer from 'src/profile/components/organisms/edit/ImageEditLayer';
+import ImageCrop from 'src/profile/components/organisms/edit/ImageCrop';
 import BasicProfileImage from 'src/profile/components/organisms/edit/BasicProfileImage';
 import { setProfile, setProfileName, setImageUrl, setIsProfileSave } from 'src/profile/features/slice';
 
@@ -115,6 +117,19 @@ const ProfileEdit = () => {
             isRemoveImage={isRemoveImage}
           />
         </FullLayer>
+      )}
+
+      {/* 이미지 크롭 페이지 영역 */}
+      {isOpenCropPage && (
+        <FullPageLayer
+          isOpen={isOpenCropPage}
+          setIsOpen={setIsOpenCropPage}
+          showBeforeBtn={true}
+          beforeLayer={() => setIsOpenCropPage(false)}
+          utilBtn={<ImageCropSaveButton />}
+        >
+          <ImageCrop setIsOpenCropPage={setIsOpenCropPage} setIsOpenImageEdit={setIsOpenImageEdit} />
+        </FullPageLayer>
       )}
 
       {/* 기본 이미지 선택 페이지 영역 */}
