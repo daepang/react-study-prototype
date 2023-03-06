@@ -9,6 +9,8 @@ export interface ProfileState {
   imageUrl: string;
   // 프로필 저장 여부
   isProfileSave: boolean;
+  // 크롭 이미지
+  cropImage: string;
   // 프로필 이미지 크롭 저장 여부
   isCropSave: boolean;
 }
@@ -18,6 +20,7 @@ const initialState: ProfileState = {
   profileName: '',
   imageUrl: 'https://picsum.photos/100/100',
   isProfileSave: false,
+  cropImage: '',
   isCropSave: false,
 };
 
@@ -42,6 +45,10 @@ export const profileSlice = createSlice({
     setIsProfileSave: (state, action: PayloadAction<boolean>) => {
       state.isProfileSave = action.payload;
     },
+    // 크롭 이미지 변경
+    setCropImage: (state, action: PayloadAction<string>) => {
+      state.cropImage = action.payload;
+    },
     // 프로필 이미지 크롭 저장 여부 변경
     setIsCropSave: (state, action: PayloadAction<boolean>) => {
       state.isCropSave = action.payload;
@@ -49,6 +56,6 @@ export const profileSlice = createSlice({
   },
 });
 
-export const { setProfileName, setImageUrl, setProfile, setIsProfileSave, setIsCropSave } = profileSlice.actions;
+export const { setProfileName, setImageUrl, setProfile, setIsProfileSave, setCropImage, setIsCropSave } = profileSlice.actions;
 
 export default profileSlice.reducer;
