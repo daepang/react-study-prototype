@@ -13,7 +13,9 @@ export const ImageCropSaveButton = () => {
 
   return (
     <>
-      <button onClick={saveImageCrop}>저장</button>
+      <button className={'profile-crop-btn'} onClick={saveImageCrop}>
+        저장
+      </button>
     </>
   );
 };

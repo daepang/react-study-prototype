@@ -373,6 +373,21 @@ input:checked+.label-switch:before {
     top: 0;
     left: 0;
 }
+.profile-crop-btn {
+    display: inline-block;
+    outline: none!important;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    margin-right: 20px;
+    color: #004eff;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: -.08px;
+}
 /* 친구 */
 .friendCard {
     display: -webkit-box;

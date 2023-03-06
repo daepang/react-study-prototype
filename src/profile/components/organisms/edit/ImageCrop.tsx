@@ -16,7 +16,10 @@ const ImageCrop = ({ setIsOpenCropPage, setIsOpenImageEdit }: Props) => {
   const dispatch = useDispatch();
 
   // 프로필 이미지 상태
-  const imageUrl = useSelector((state: RootState) => state.profile.imageUrl);
+  const imageUrl = useSelector((state: RootState) => state.profile.cropImage);
+  // 프로필 이미지 크롭 저장 여부
+  const isCropSave = useSelector((state: RootState) => state.profile.isCropSave);
+
   // 크롭 상태
   const [cropper, setCropper] = useState<any>();
 
