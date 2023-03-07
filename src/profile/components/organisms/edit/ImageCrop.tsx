@@ -5,6 +5,8 @@ import 'cropperjs/dist/cropper.css';
 
 import { RootState } from 'src/store';
 
+import { setImageUrl, setCropImage, setIsCropSave } from 'src/profile/features/slice';
+
 interface Props {
   // 이미지 크롭 페이지 열림,닫힘 상태 변경
   setIsOpenCropPage: Function;
@@ -22,6 +24,17 @@ const ImageCrop = ({ setIsOpenCropPage, setIsOpenImageEdit }: Props) => {
 
   // 크롭 상태
   const [cropper, setCropper] = useState<any>();
+
+  useEffect(() => {
+    if (isCropSave) {
+      const base64 = cropper.getCroppedCanvas().toDataURL();
+      dispatch(setImageUrl(base64 as string));
+      setIsOpenImageEdit(false);
+      setIsOpenCropPage(false);
+      dispatch(setCropImage(''));
+      dispatch(setIsCropSave(false));
+    }
+  }, [isCropSave]);
 
   return (
     <>
