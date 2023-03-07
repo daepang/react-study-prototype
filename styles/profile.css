@@ -398,6 +398,7 @@ input:checked+.label-switch:before {
     background-color: rgba(0,0,0,.5);
     pointer-events: none;
 }
+.cropper-view-box { border-radius: 50% !important;}
 /* 친구 */
 .friendCard {
     display: -webkit-box;
