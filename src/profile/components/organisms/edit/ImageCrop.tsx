@@ -48,6 +48,7 @@ const ImageCrop = ({ setIsOpenCropPage, setIsOpenImageEdit }: Props) => {
           guides={true}
         />
       </article>
+      <div className='profile-registDim'></div>
     </>
   );
 };
