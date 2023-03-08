@@ -51,8 +51,12 @@ const FriendList = ({ isFriendAddOpen, setIsFriendAddOpen }: Props) => {
 
   // 친구 추가 이벤트
   const addFriend = () => {
-    const list = [...friendList];
-    setFriendList([...list, { friendName: addFriendName, friendImageUrl: addFriendImageUrl }]);
+    if (friendList) {
+      const list = [...friendList];
+      setFriendList([...list, { friendName: addFriendName, friendImageUrl: addFriendImageUrl }]);
+    } else {
+      setFriendList([{ friendName: addFriendName, friendImageUrl: addFriendImageUrl }]);
+    }
     setAddFriendName('');
     setAddFriendImageUrl('');
   };
