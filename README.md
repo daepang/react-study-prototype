@@ -29,8 +29,8 @@
 
 ### 페이지 목록
 
-- 프로젝트 메인 : http://localhost:3000/
-- 프로필 메인 : http://localhost:3000/profile
+- 메인 : http://localhost:3000/
+- 프로필 홈 : http://localhost:3000/profile
 - 프로필 편집 : http://localhost:3000/profile/edit
 - 친구 목록 : http://localhost:3000/profile/friend
 - 알림 설정 : http://localhost:3000/profile/setting
