@@ -1,6 +1,7 @@
 import React from 'react';
 
 import PageLayout from 'src/common/components/PageLayout';
+
 import Setting from 'src/profile/components/templates/setting';
 
 const Index = () => {
