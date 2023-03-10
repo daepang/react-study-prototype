@@ -56,6 +56,7 @@ export const profileSlice = createSlice({
   },
 });
 
-export const { setProfileName, setImageUrl, setProfile, setIsProfileSave, setCropImage, setIsCropSave } = profileSlice.actions;
+export const { setProfileName, setImageUrl, setProfile, setIsProfileSave, setCropImage, setIsCropSave } =
+  profileSlice.actions;
 
 export default profileSlice.reducer;
