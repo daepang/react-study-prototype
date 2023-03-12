@@ -23,6 +23,7 @@ const Header = ({ headerType = HEADER_TYPE.DEFAULT, headerTitle, headerUtilFunc 
           <div className={classNames('module-header-layer')}>
             <h1 className={classNames('module-header-title')}>{headerTitle}</h1>
             <div className={'module-header-right'}>
+              {/* 알림 설정 */}
               {headerType === HEADER_TYPE.PROFILE && (
                 <Link href={'/profile/setting'}>
                   <a className={'module-header-btn module-header-btn-setting'}>셋팅</a>
