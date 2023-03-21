@@ -3,16 +3,27 @@ import classNames from 'classnames';
 import Draggable, { DraggableEvent } from 'react-draggable';
 
 interface Props {
+  // 열림,닫힘 상태
   isOpen: boolean;
+  // 열림,닫힘 상태 변경
   setIsOpen: Dispatch<SetStateAction<boolean>>;
+  // 상단 타이틀
   title?: string;
+  // 상단 서브 타이틀
   subTitle?: string;
+  // 타이틀 노드
   titleNode?: ReactNode;
+  // 내용
   children: string | ReactNode;
+  // 레이어 열릴 때, 호출 이벤트
   openLayer?: () => void;
+  // 레이어 닫힐 때, 호출 이벤트
   closeLayer?: (...args: any) => void;
+  // 닫기 버튼 노출 여부
   isShowCloseLayerBtn?: boolean;
+  // 하단 영역
   bottomComps?: ReactNode;
+  // 클래스
   classes?: string;
 }
 

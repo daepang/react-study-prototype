@@ -3,10 +3,12 @@ import classNames from 'classnames';
 
 import ProfileImage from 'src/profile/components/molecules/ProfileImage';
 
-// Props
 interface Props {
+  // 프로필 이미지 URL
   imageUrl: string;
+  // 친구 이름
   friendName: string;
+  // 메시지 모달 이벤트
   sendMessage?: Function;
 }
 

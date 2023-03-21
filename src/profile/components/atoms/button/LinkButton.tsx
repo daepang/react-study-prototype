@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 
-// Props
 interface Props {
   // 이동할 URL
   url: string;

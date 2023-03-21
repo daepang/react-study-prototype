@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#111211;stroke-miterlimit:10;stroke-width:1.5px}
+        </style>
+    </defs>
+    <g id="ic_header_back" transform="translate(110 7)">
+        <path id="사각형_280" fill="none" d="M0 0H32V32H0z" transform="translate(-110 -7)"/>
+        <g id="icon" transform="translate(-110.393 -6.893)">
+            <path id="패스_12" d="M14.646 25.107L5.393 16l9.253-9.112" class="cls-2"/>
+            <path id="선_5" d="M0 0L21.276 0" class="cls-2" transform="translate(5.724 16.005)"/>
+        </g>
+    </g>
+</svg>

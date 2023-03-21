@@ -1,11 +1,7 @@
 @charset "UTF-8";
-
 /* reset */
-
 *{margin:0;padding:0; font-family:'Noto Sans', 'Noto Sans Korean'; -webkit-text-size-adjust: none;  -moz-text-size-adjust: none;  -ms-text-size-adjust: none;}
-
 html, body {width:100%; height:100%; margin:0; padding:0; font-family:'Noto Sans', 'Noto Sans Korean', 'Nanum Gothic', Nanum Gothic, '나눔고딕', Dotum, '돋움', Gulim, '굴림',sans-serif; -webkit-text-size-adjust: none;  -moz-text-size-adjust: none;  -ms-text-size-adjust: none; }
-
 body{font-size:16px;  word-break:break-all;-ms-word-break:break-all; line-height:1.1;}
 a, address, blockquote, br, fieldset, legend, label, form, input, select, textarea, button, table, th, td caption, cite, code, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, div, iframe, ul, ol, li, hr, img{margin:0; padding:0;}
 h1, h2, h3, h4, h5, h6 {font-size:16px; text-align:left;}
@@ -26,34 +22,27 @@ button {
     border: none;
     background: none;
 }
-
 /* hyper link */
 a,
 a:link,
 a:visited{text-decoration:none;}
 a:active,
 a:hover{text-decoration:none;}
-
 /* hidden content */
 .skip{font-size: 1px; height: 1px; line-height: 1px; overflow: hidden; position: absolute; text-indent: 4px; white-space: nowrap; width: 1px;}
-
 /* hr , legend , caption */
 hr, legend, caption{clear:both; display:none; list-style:none; position:absolute; top:0; left:0; width:0; height:0; margin:0; padding:0; border:0; background:none; font-size:0px; line-height:0; visibility:hidden;}
-
 /* clear */
 .clear{*zoom:1;}
 .clear:after{content:""; clear:both; display:block;}
-
 /*hidden*/
 .hidden {
     display : none;
 }
-
 /* flex */
 .flex {
     display: flex;
 }
-
 *, button, input, option, select, textarea {
     outline: none!important;
     outline-color: initial;

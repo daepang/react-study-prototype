@@ -3,7 +3,6 @@
     margin-bottom: 30px;
     padding: 20px 20px 0;
 }
-
 .profileInfo-top {
     display: -webkit-box;
     display: -webkit-flex;
@@ -22,7 +21,6 @@
     align-items: center;
     margin-bottom: 14px;
 }
-
 .profileInfo .profileCard-img {
     margin-right: 27px;
     width: 80px;
@@ -37,13 +35,11 @@
     -o-background-size: 80px 80px;
     background-size: 80px 80px;
 }
-
 .profileCard-img, .profileCard-img img {
     display: block;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
 }
-
 .profileCard-img {
     position: relative;
     overflow: visible;
@@ -54,11 +50,11 @@
     -webkit-background-size: 50px 50px;
     -moz-background-size: 50px 50px;
     -o-background-size: 50px 50px;
+    background-image: url(/resources/images/profile-default-img.svg);
     background-size: 50px 50px;
     background-position: 50% 50%;
     background-repeat: no-repeat;
 }
-
 .profileCard-img img {
     height: 100%;
     line-height: 1;
@@ -68,7 +64,25 @@
     width: 100%;
     background: #fff;
 }
-
+.profileCard-changeBtn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: pointer;
+    width: 27px;
+    height: 27px;
+    -webkit-background-size: 27px 27px;
+    -moz-background-size: 27px 27px;
+    -o-background-size: 27px 27px;
+    background-size: 27px 27px;
+    background-image: url(/resources/images/img-change.svg);
+}
 .profileInfo-score {
     display: -webkit-box;
     display: -webkit-flex;
@@ -87,7 +101,6 @@
     -moz-column-gap: 6px;
     column-gap: 6px;
 }
-
 .profileInfo-scoreItem {
     width: auto;
     -webkit-box-flex: 1;
@@ -96,26 +109,38 @@
     -ms-flex: 1;
     flex: 1;
 }
-
 .profileInfo-scoreNo {
     display: block;
     font-size: 16px;
     font-weight: 600;
     color: #000;
 }
-
 .profileInfo-scoreText {
     display: block;
     font-size: 12px;
     font-weight: 400;
     color: #333;
 }
-
+.profileInfo-nickName {
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #666;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    max-height: 54px;
+    line-height: 18px;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    white-space: inherit;
+}
 .profileInfo-btnBox {
     margin-top: 20px;
     text-align: center;
 }
-
 .profileInfo-btn {
     display: -webkit-box;
     display: -webkit-flex;
@@ -148,17 +173,14 @@
     color: #333;
     background-color: #fff;
 }
-
 /* 설정 */
 .setting-all {
     padding: 6px 0 5px;
     border-bottom: 1px solid #f0f0f0;
 }
-
 .setting-list {
     padding: 10px 0 10px 20px;
 }
-
 .setting-switch {
     display: -webkit-box;
     display: -webkit-flex;
@@ -177,29 +199,24 @@
     align-items: center;
     padding: 6px 20px 7px;
 }
-
 .setting-switch .title {
     display: inline-block;
     font-size: 14px;
     color: #333;
     line-height: 2;
 }
-
 .checkbox-switch {
     position: absolute;
     opacity: 0;
 }
-
 input:checked+.label-switch {
     background: #3b416c;
 }
-
 input:checked+.label-switch:before {
     left: -webkit-calc(100% - 30px);
     left: -moz-calc(100% - 30px);
     left: calc(100% - 30px);
 }
-
 .label-switch {
     display: inline-block;
     position: relative;
@@ -213,7 +230,6 @@ input:checked+.label-switch:before {
     vertical-align: top;
     background: #f0f0f0;
 }
-
 .label-switch:before {
     content: "";
     display: block;
@@ -235,9 +251,155 @@ input:checked+.label-switch:before {
     -moz-transition: left .3s ease;
     transition: left .3s ease;
 }
-
+/* 편집 */
+.profileEdit {
+    padding: 20px 20px 30px;
+    text-align: center;
+}
+.profileEdit .profileCard-img{
+    margin: 0 auto 20px;
+    width: 100px;
+    height: 100px;
+    min-width: 100px;
+    min-height: 100px;
+    -webkit-background-size: 100px 100px;
+    -moz-background-size: 100px 100px;
+    -o-background-size: 100px 100px;
+    background-size: 100px 100px;
+}
+.profileEdit-field {
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+.profileEdit-titleBox {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.profileEdit-title {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+}
+.profileEdit-field .btnContained {
+    font-size: 14px;
+    font-weight: 400;
+}
+/* 이미지 편집 */
+.profile-regist {
+    position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -moz-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+.profile-regist-center {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.profile-select {
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    grid-row-gap: 20px;
+    row-gap: 20px;
+    padding: 30px 20px;
+}
+.profile-selectItem.on {
+    position: relative;
+}
+.profile-selectItem.on:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 86px;
+    height: 86px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 4px solid #3a416f;
+    background: transparent;
+}
+.profile-selectItem, .profile-selectItem img {
+    display: block;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+.profile-selectItem {
+    position: relative;
+    overflow: visible;
+    width: 92px;
+    height: 92px;
+    -webkit-background-size: 92px 92px;
+    -moz-background-size: 92px 92px;
+    -o-background-size: 92px 92px;
+    background-size: 92px 92px;
+    background-image: url(/resources/images/profile-default-img.svg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.profile-selectItem img {
+    width: 100%;
+    height: 100%;
+    line-height: 1;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.profile-crop-btn {
+    display: inline-block;
+    outline: none!important;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    margin-right: 20px;
+    color: #004eff;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: -.08px;
+}
+.profile-registDim {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    background-color: rgba(0,0,0,.5);
+    pointer-events: none;
+}
+.cropper-view-box { border-radius: 50% !important;}
 /* 친구 */
-
 .friendCard {
     display: -webkit-box;
     display: -webkit-flex;
@@ -253,12 +415,10 @@ input:checked+.label-switch:before {
     padding-bottom: 10px;
     width: 100%;
 }
-
 .friendCard-list {
     padding-left: 20px;
     padding-right: 20px;
 }
-
 .friendCard-info {
     cursor: pointer;
     display: flex;
@@ -277,7 +437,6 @@ input:checked+.label-switch:before {
     flex-grow: 1;
     word-break: keep-all;
 }
-
 .friendCard-friendName {
     margin-right: 4px;
     font-size: 14px;
@@ -285,7 +444,6 @@ input:checked+.label-switch:before {
     color: #000;
     font-weight: 700;
 }
-
 .friendCard-side {
     -webkit-box-align: center;
     -webkit-align-items: center;
@@ -304,7 +462,6 @@ input:checked+.label-switch:before {
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
 }
-
 .friendCard-side {
     display: -webkit-box;
     display: -webkit-flex;
@@ -312,12 +469,10 @@ input:checked+.label-switch:before {
     display: -ms-flexbox;
     display: flex;
 }
-
 .friendCard-list .friendCard-btn-message {
     color: #004eff;
     background: rgba(0,78,255,.08);
 }
-
 .friendCard-list .friend-btn {
     width: 54px;
     height: 27px;
@@ -329,7 +484,6 @@ input:checked+.label-switch:before {
     font-weight: 700;
     border: 1px solid transparent;
 }
-
 .friendCard-btn {
     display: -webkit-box;
     display: -webkit-flex;
@@ -342,4 +496,3 @@ input:checked+.label-switch:before {
     -ms-flex-pack: center;
     justify-content: center;
 }
-
