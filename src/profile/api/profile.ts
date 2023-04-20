@@ -1,11 +1,13 @@
-import { api } from 'src/common/api';
+import axiosInstance from 'src/common/api';
 import { API_RESULT } from 'src/common/const/apiResult';
 
 // 친구 목록
 export const fetchFriendList = async () => {
   try {
-    const result = await api({
-      requestUrl: '/profile/friendList',
+    const result = await axiosInstance({
+      url: '/profile/friendList',
+      method: 'get',
+      data: {},
     });
     if (result) {
       if (result.data && result.data.code === API_RESULT.SUC_PROC_0000) {
